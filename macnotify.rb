@@ -13,10 +13,10 @@ Plugin.create(:macnotify) do
 
     TerminalNotifier.notify(
       text,
-      :title=>u,
-      :sender=>'org.macosforge.xquartz.X11',
-      :appIcon=> Skin.photo('icon.png').path,
-      :contentImage=> icon
+      title: u,
+      sender: 'org.macosforge.xquartz.X11',
+      appIcon: Skin.photo('icon.png').path,
+      contentImage: icon
     )
     stop.call
   end
